@@ -181,7 +181,7 @@ function Landing() {
         <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 py-3">
           <a href="#top" className="flex items-center gap-3">
             <img src="/favicon.png" alt="Bear Family LLC logo" className="h-15 w-15 object-contain" />
-            <span className="-ml-2.5 font-display text-base font-semibold tracking-tight">
+            <span className="font-display text-base font-semibold tracking-tight" style="margin-left: -10px;">
               Bear Family <span className="text-muted-foreground">LLC</span>
             </span>
           </a>
