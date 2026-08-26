@@ -250,7 +250,17 @@ function Landing() {
               ))}
             </div>
 
-            <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border text-left sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-16 overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-glow)]">
+              <img
+                src={heroImage}
+                alt="Glowing blue and violet neural network visualising AI-native product engineering"
+                width={1600}
+                height={1008}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border text-left sm:grid-cols-2 lg:grid-cols-4">
               {[
                 ["Positioning", "AI-native, not AI-added"],
                 ["Promise", "Move faster. Build smarter."],
