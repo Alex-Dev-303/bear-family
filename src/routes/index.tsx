@@ -179,7 +179,7 @@ function Landing() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 py-3">
-          <a href="#top" className="flex items-center gap-3">
+          <a href="#top" className="flex items-center">
             <img src="/favicon.png" alt="Bear Family LLC logo" className="h-15 w-15 object-contain" />
             <span className="font-display text-base font-semibold tracking-tight">
               Bear Family <span className="text-muted-foreground">LLC</span>
@@ -448,7 +448,7 @@ function Landing() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-10 text-center md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-3">
-            <img src="/favicon.png" alt="" className="h-12 w-12 object-contain" />
+            <img src="/favicon.png" alt="" className="h-15 w-15 object-contain" />
             <span className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Bear Family LLC. All rights reserved.
             </span>
