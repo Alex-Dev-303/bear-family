@@ -13,8 +13,6 @@ import {
   Sparkles,
   Workflow,
 } from "lucide-react";
-import logo from "@/assets/bearfamily-logo.png.asset.json";
-import mark from "@/assets/bearfamily-mark.png.asset.json";
 import heroImage from "@/assets/hero-abstract.jpg";
 import showcaseSaas from "@/assets/showcase-saas.jpg";
 import showcaseVision from "@/assets/showcase-vision.jpg";
@@ -182,7 +180,7 @@ function Landing() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 py-3">
           <a href="#top" className="flex items-center gap-3">
-            <img src={mark.url} alt="Bear Family LLC logo" className="h-10 w-10 object-contain" />
+            <img src="/favicon.png" alt="Bear Family LLC logo" className="h-10 w-10 object-contain" />
             <span className="font-display text-base font-semibold tracking-tight">
               Bear Family <span className="text-muted-foreground">LLC</span>
             </span>
@@ -450,7 +448,7 @@ function Landing() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-10 text-center md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="" className="h-12 w-12 object-contain" />
+            <img src="/favicon.png" alt="" className="h-12 w-12 object-contain" />
             <span className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Bear Family LLC. All rights reserved.
             </span>
