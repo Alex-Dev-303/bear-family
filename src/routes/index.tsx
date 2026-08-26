@@ -387,30 +387,34 @@ function Landing() {
 
         {/* Contact */}
         <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-16 text-center">
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-14 md:px-12">
             <div className="hero-glow absolute inset-0" aria-hidden />
-            <div className="relative">
-              <h2 className="mx-auto max-w-2xl text-3xl font-bold md:text-4xl">
-                Let&apos;s reimagine your product with AI.
-              </h2>
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                Tell us where you are today — an idea, a prototype, or a product that needs to move
-                faster. We will map the fastest path to launch.
-              </p>
-              <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-                <a
-                  href="mailto:contact@bearfamily.llc"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  <Mail className="h-4 w-4" /> contact@bearfamily.llc
-                </a>
-                <a
-                  href="tel:+15107039930"
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/60"
-                >
-                  <Phone className="h-4 w-4" /> Book a call
-                </a>
+            <div className="relative grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-accent">Contact</p>
+                <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+                  Let&apos;s reimagine your product with AI.
+                </h2>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Tell us where you are today — an idea, a prototype, or a product that needs to
+                  move faster. We will map the fastest path to launch.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href="mailto:contact@bearfamily.llc"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/60"
+                  >
+                    <Mail className="h-4 w-4" /> contact@bearfamily.llc
+                  </a>
+                  <a
+                    href="tel:+15107039930"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/60"
+                  >
+                    <Phone className="h-4 w-4" /> Book a call
+                  </a>
+                </div>
               </div>
+              <ContactForm />
             </div>
           </div>
         </section>
