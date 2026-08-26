@@ -15,6 +15,11 @@ import {
 } from "lucide-react";
 import logo from "@/assets/bearfamily-logo.png.asset.json";
 import mark from "@/assets/bearfamily-mark.png.asset.json";
+import heroImage from "@/assets/hero-abstract.jpg";
+import showcaseSaas from "@/assets/showcase-saas.jpg";
+import showcaseVision from "@/assets/showcase-vision.jpg";
+import showcaseGenai from "@/assets/showcase-genai.jpg";
+import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -143,6 +148,27 @@ const proof = [
   "Launched scalable AI image and content generation platforms",
 ];
 
+const showcase = [
+  {
+    image: showcaseSaas,
+    title: "AI SaaS copilots & dashboards",
+    body: "Assistant-driven interfaces with live analytics, smart search, and automation baked in.",
+    alt: "Dark AI SaaS dashboard with analytics charts and an assistant chat panel",
+  },
+  {
+    image: showcaseVision,
+    title: "Computer vision monitoring",
+    body: "Real-time CCTV detection grids with anomaly alerts and operational visibility.",
+    alt: "Multi-camera CCTV monitoring wall with AI detection boxes around people",
+  },
+  {
+    image: showcaseGenai,
+    title: "Generative AI platforms",
+    body: "Image, content, and workflow generation products built for scale and speed.",
+    alt: "Abstract particle portrait representing generative AI creativity",
+  },
+];
+
 const compliance = [
   "Secure development practices",
   "Privacy-first architecture",
@@ -224,7 +250,17 @@ function Landing() {
               ))}
             </div>
 
-            <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border text-left sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-16 overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-glow)]">
+              <img
+                src={heroImage}
+                alt="Glowing blue and violet neural network visualising AI-native product engineering"
+                width={1600}
+                height={1008}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border text-left sm:grid-cols-2 lg:grid-cols-4">
               {[
                 ["Positioning", "AI-native, not AI-added"],
                 ["Promise", "Move faster. Build smarter."],
@@ -275,6 +311,33 @@ function Landing() {
             ))}
           </div>
         </Section>
+
+        {/* Showcase */}
+        <Section
+          eyebrow="Showcase"
+          title="Products that look and feel intelligent."
+          lede="A glimpse of the interfaces, detection systems, and generative platforms we build for founders."
+        >
+          <div className="grid gap-6 md:grid-cols-3">
+            {showcase.map((item) => (
+              <article key={item.title} className="surface-card overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  loading="lazy"
+                  width={1200}
+                  height={912}
+                  className="h-52 w-full object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-base font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Section>
+
 
         {/* Industries */}
         <Section
@@ -351,30 +414,34 @@ function Landing() {
 
         {/* Contact */}
         <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-16 text-center">
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface px-6 py-14 md:px-12">
             <div className="hero-glow absolute inset-0" aria-hidden />
-            <div className="relative">
-              <h2 className="mx-auto max-w-2xl text-3xl font-bold md:text-4xl">
-                Let&apos;s reimagine your product with AI.
-              </h2>
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                Tell us where you are today — an idea, a prototype, or a product that needs to move
-                faster. We will map the fastest path to launch.
-              </p>
-              <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-                <a
-                  href="mailto:contact@bearfamily.llc"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  <Mail className="h-4 w-4" /> contact@bearfamily.llc
-                </a>
-                <a
-                  href="tel:+15107039930"
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/60"
-                >
-                  <Phone className="h-4 w-4" /> Book a call
-                </a>
+            <div className="relative grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-accent">Contact</p>
+                <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+                  Let&apos;s reimagine your product with AI.
+                </h2>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Tell us where you are today — an idea, a prototype, or a product that needs to
+                  move faster. We will map the fastest path to launch.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href="mailto:contact@bearfamily.llc"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/60"
+                  >
+                    <Mail className="h-4 w-4" /> contact@bearfamily.llc
+                  </a>
+                  <a
+                    href="tel:+15107039930"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/60"
+                  >
+                    <Phone className="h-4 w-4" /> Book a call
+                  </a>
+                </div>
               </div>
+              <ContactForm />
             </div>
           </div>
         </section>
