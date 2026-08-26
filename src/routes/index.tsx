@@ -15,6 +15,11 @@ import {
 } from "lucide-react";
 import logo from "@/assets/bearfamily-logo.png.asset.json";
 import mark from "@/assets/bearfamily-mark.png.asset.json";
+import heroImage from "@/assets/hero-abstract.jpg";
+import showcaseSaas from "@/assets/showcase-saas.jpg";
+import showcaseVision from "@/assets/showcase-vision.jpg";
+import showcaseGenai from "@/assets/showcase-genai.jpg";
+import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -141,6 +146,27 @@ const proof = [
   "Developed healthcare systems with AI-assisted analysis and decision support",
   "Delivered real-time CCTV monitoring with anomaly detection and alerting",
   "Launched scalable AI image and content generation platforms",
+];
+
+const showcase = [
+  {
+    image: showcaseSaas,
+    title: "AI SaaS copilots & dashboards",
+    body: "Assistant-driven interfaces with live analytics, smart search, and automation baked in.",
+    alt: "Dark AI SaaS dashboard with analytics charts and an assistant chat panel",
+  },
+  {
+    image: showcaseVision,
+    title: "Computer vision monitoring",
+    body: "Real-time CCTV detection grids with anomaly alerts and operational visibility.",
+    alt: "Multi-camera CCTV monitoring wall with AI detection boxes around people",
+  },
+  {
+    image: showcaseGenai,
+    title: "Generative AI platforms",
+    body: "Image, content, and workflow generation products built for scale and speed.",
+    alt: "Abstract particle portrait representing generative AI creativity",
+  },
 ];
 
 const compliance = [
