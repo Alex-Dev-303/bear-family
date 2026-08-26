@@ -312,6 +312,33 @@ function Landing() {
           </div>
         </Section>
 
+        {/* Showcase */}
+        <Section
+          eyebrow="Showcase"
+          title="Products that look and feel intelligent."
+          lede="A glimpse of the interfaces, detection systems, and generative platforms we build for founders."
+        >
+          <div className="grid gap-6 md:grid-cols-3">
+            {showcase.map((item) => (
+              <article key={item.title} className="surface-card overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  loading="lazy"
+                  width={1200}
+                  height={912}
+                  className="h-52 w-full object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-base font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Section>
+
+
         {/* Industries */}
         <Section
           id="industries"
