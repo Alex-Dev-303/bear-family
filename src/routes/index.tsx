@@ -426,10 +426,10 @@ function Landing() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
-                    href="mailto:contact@bearfamily.llc"
+                    href="mailto:contact@bearfamily.ink"
                     className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/60"
                   >
-                    <Mail className="h-4 w-4" /> contact@bearfamily.llc
+                    <Mail className="h-4 w-4" /> contact@bearfamily.ink
                   </a>
                   <a
                     href="tel:+15107039930"
