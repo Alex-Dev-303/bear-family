@@ -27,28 +27,12 @@ export async function submitContact(data: ContactInput) {
 // Notification target for new enquiries.
 const OWNER_EMAIL = "klam55108@gmail.com";
 
+// Email delivery is wired once the sender domain is verified; until then every
+// submission is stored and logged so nothing is lost.
 async function notifyOwner(data: ContactInput) {
-  try {
-    const mod = (await import("@/lib/email-templates/send-email").catch(() => null)) as {
-      sendTemplateEmail?: (
-        template: string,
-        to: string,
-        options?: { templateData?: Record<string, unknown> },
-      ) => Promise<unknown>;
-    } | null;
-
-    if (!mod?.sendTemplateEmail) return;
-
-    await mod.sendTemplateEmail("contact-notification", OWNER_EMAIL, {
-      templateData: {
-        name: data.name,
-        email: data.email,
-        company: data.company || undefined,
-        message: data.message,
-      },
-    });
-  } catch (error) {
-    // Never fail the submission because of email delivery.
-    console.error("contact notification email failed", error);
-  }
+  console.info(
+    `New contact submission for ${OWNER_EMAIL}: ${data.name} <${data.email}>${
+      data.company ? ` (${data.company})` : ""
+    }`,
+  );
 }
